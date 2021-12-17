@@ -6,7 +6,7 @@ class CampersController < ApplicationController
 
     def show
         camper = find_camper
-        render json: camper, status: :ok
+        render json: camper, serializer: ShowCamperSerializer,status: :ok
     end
 
     def create
